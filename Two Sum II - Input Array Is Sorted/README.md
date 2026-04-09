@@ -23,16 +23,15 @@ Check all possible pairs and find the two numbers whose sum equals the target.
 - Since indexing is **1-based**, add `+1` to indices
 
 
-- Intuition
-The most straightforward approach: try every pair of elements and check if they add up to the target. For each element at index i, check every element at index j > i. If their sum equals the target, return the 1-indexed positions.
-
+- Intuition: 
+  The most straightforward approach: try every pair of elements and check if they add up to the target. For each element at index i, check every element at index j > i. If their sum equals the target, return the 1-indexed positions.
 This doesn't use the sorted property at all, which is a red flag that we're leaving performance on the table. But it's a valid starting point for building intuition.
 
-- Algorithm
-Loop through each index i from 0 to n-2.
-For each i, loop through each index j from i+1 to n-1.
-If numbers[i] + numbers[j] equals the target, return [i+1, j+1].
-Since a solution is guaranteed, we'll always find it before exhausting all pairs.
+- Algorithm: 
+1. Loop through each index i from 0 to n-2.
+2. For each i, loop through each index j from i+1 to n-1.
+3. If numbers[i] + numbers[j] equals the target, return [i+1, j+1].
+4. Since a solution is guaranteed, we'll always find it before exhausting all pairs.
 
 ---
 
